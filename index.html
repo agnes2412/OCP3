@@ -5,31 +5,97 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Pour créer un site web réactif sur tous les appareils-->
 	<script src='https://kit.fontawesome.com/a076d05399.js'></script><!--Pour intégrer des icônes Font-awesone-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap" rel="stylesheet">
 	<title>Ohmyfood</title>
 </head>	
 	
 <body>
 	<div id="bloc_page">
 		<header>
-			<img src="img/ohmyfood.png" alt="logo_ohmyfood" class="logo">
-		<div id="recherche">
-			<a href="map"><i class="fas fa-map-marker-alt fa-lg"></i></a>
-		</div>
-			<input type="search" id ="champ_recherche"/>
-			<h1>Reservez le menu qui vous convient</h1>
-			<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-			<button id="explorer">Explorer nos restaurants</button>	
+			<div id="logo">ohmyfood</div>
 		</header>
+		
+	<section class="presentation">
+		<div id="recherche">
+			<div id="map_champ"><a href="map"><i class="fas fa-map-marker-alt fa-lg"></i></a>
+			<input type="search" id ="champ_recherche"/>
+			</div>	
+		</div>
+			
+			<div id="reserver">
+				<h1>Réservez le menu qui vous convient</h1>
+				<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+				<button id="explorer">Explorer nos restaurants</button>	
+			</div>	
+	</section>		
 
 		<section id="fonctionnement">
+			<h2>Fonctionnement</h2>
 			<nav>
 				<ol>
-			<li><button class="choisir">Choisissez un restaurant</button></li>
-			<li><button class="composer">Composez votre menu</button></li>
-			<li><button class="déguster">Dégustez au restaurant</button></li>
-			</ol>
+					<li><span class="num">1</span><button class="form"><i class="fas fa-mobile-alt icone1"></i>Choisissez un restaurant</button></li>
+					<li><span class="num">2</span><button class="form"><i class="fas fa-list-ul icone2"></i>Composez votre menu</button></li>
+					<li><span class="num">3</span><button class="form"><i class="fas fa-store icone3"></i>Dégustez au restaurant</button></li>
+				</ol>
 			</nav>
 		</section>
+
+		<section id="restaurants">
+			<h2>Restaurants</h2>
+			<div class="container_resto"></div>
+			<div class="resto1 forme_carte">
+				<a href="#la_palette_du_gout">
+					<div class="forme_photo">
+						<span class="new">Nouveau</span>
+					</div>
+					<h2>La palette du goût</h2>
+					<span><i class="far fa-heart hover_heart"></i></span>
+					<p>Ménilmontant</p>	
+				</a>		
+			</div>
+			<div class="resto2 forme_carte">
+				<a href="#la_note_enchantee">
+					<div class="forme_photo">
+						<span class="new">Nouveau</span>
+					</div>
+					<h2>La note enchantée</h2>
+						<span><i class="far fa-heart hover_heart"></i></span>
+					<p>Charonne</p>
+				</a>
+			</div>
+			<div class="resto3 forme_carte">
+				<a href="#a_la_francaise">
+					<div class="forme_photo">
+					</div>
+					<h2>A la française</h2>
+						<span><i class="far fa-heart hover_heart"></i></span>
+					<p>Cité Rouge</p>
+				</a>
+			</div>
+			<div class="resto4 forme_carte">
+				<a href="#le_delice_des_sens">
+					<div class="forme_photo"></div>
+					<h2>Le délice des sens</h2>
+					<span><i class="far fa-heart hover_heart"></i></span>
+					<p>Folie-Méricourt</p>
+				</a>
+			</div>	
+		</section>
+
+		<footer>
+			<h3>Ohmyfood</h3>
+			<div id="proposer">
+				<a href="#proposer_un_restaurant"><span><i class="fas fa-utensils"></i></span>Proposer un restaurant</a>
+			</div>
+			<div id="devenir">
+				<a href="#devenir_partenaire"><span><i class="fas fa-hands-helping"></i></span>Devenir partenaire</a>
+			</div>
+			<div id="mentions"><a href="#mentions_legales">Mentions légales</a>
+			</div>
+			<div id="contacts"><a href="#contacts">Contacts</a>
+			</div>
+		</footer>
 
 
 

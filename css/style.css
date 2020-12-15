@@ -1,0 +1,177 @@
+body
+{
+	font-family: 'Roboto', sans-serif;
+}
+
+#bloc_page
+{
+	border: 2px solid pink;
+}
+#logo
+{
+	font-family: 'Shrikhand', cursive;
+	font-size: 2em;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+}
+
+
+*:focus {
+outline: none;
+}
+
+header
+{
+	margin: 5px 0 0px 0;
+}
+
+#recherche
+{
+	box-shadow: inset 0px 4px 3px rgba(160, 160, 160, .6);
+	padding: 17px 0px;
+	margin-bottom: 0px;
+	background-color: #e2e2e0;
+
+}
+
+#champ_recherche
+{
+	background-color: #e2e2e0;
+	padding-left: 15px;
+	border: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+#champ_recherche a:active
+{
+	border: none;
+}
+
+#map_champ
+{
+	margin-left: 25%;
+}
+
+.fa-map-marker-alt
+{
+	color: black;
+}
+
+.presentation
+{
+	margin-top: 0px;
+	padding-bottom: 33%;
+	background-color: #f2f2f2;
+}
+
+footer h3
+{
+	font-family: 'Shrikhand', cursive;
+}
+
+h1
+{
+	font-size: 1.6em;
+	text-align: center;
+	padding: 17px 37px 0px 37px;
+	margin-bottom: -8px;
+}
+
+#reserver p
+{
+	text-align: center;
+	font-size: 1.1em;
+}
+
+#reserver
+{
+	position: relative;
+}
+
+#explorer
+{
+	position: absolute;
+	margin:0;
+	top: 145%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+	font-size: 1.1em;
+	color: white;
+	background: linear-gradient(#FF79DA, #9356DC);
+	padding: 17px 25px;
+	border-radius: 30px;
+	box-shadow: 4px 4px 4px lightgrey;
+	border: none;
+}
+
+#fonctionnement
+{
+	border: 2px solid blue;
+	position: relative;
+}
+
+#fonctionnement h2
+{
+	font-size: 1.4em;
+	margin-left: 20px;
+	margin-top: 13%;
+
+}
+
+#fonctionnement button
+{
+	font-size: 1em;
+	font-weight: bold;
+	border: none;
+	padding: 26px 0px;
+	width: 94%;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	box-shadow: 4px 4px 4px lightgrey;
+	margin-left: -4%;
+	background-color: #f7f7f7;
+}
+
+ol
+{
+	list-style-type: none;
+	display: block;
+}
+
+
+.num
+{
+	position: absolute;
+	margin-top: 7%;
+	margin-left: -7%;
+	padding: 4px 9px;
+	border-radius: 50%;
+	background-color: #9356DC;
+	color: white;
+	font-size: 0.8em;
+}
+
+.icone1
+{
+	margin-right: 20px;
+	color: grey;
+	font-size: 1.4em;
+	margin-left: 10px;
+}
+
+.icone2
+{
+	margin-right: 15px;
+	color: grey;
+	font-size: 1.3em;
+}
+
+.icone3
+{
+	margin-right: 20px;
+	color: grey;
+	font-size: 1.2em;
+}
