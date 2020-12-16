@@ -1,6 +1,27 @@
+@font-face {
+ 	font-family: 'Roboto';
+ 	src: url("../Roboto/Roboto-Regular.ttf");
+ 	font-weight: normal;
+ 	font-style: normal;
+ 	font-display: swap;
+}
+
+@font-face {
+    font-family: 'Shrikhand';
+    src: url("../Shrikhand/Shrikhand-Regular.ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+
+}
+
 body
 {
 	font-family: 'Roboto', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 #bloc_page
@@ -19,6 +40,12 @@ body
 
 *:focus {
 outline: none;
+}
+
+a /*Liens non survolés*/
+{
+	text-decoration: none;
+	color: black;
 }
 
 header
@@ -121,22 +148,26 @@ h1
 
 }
 
+button
+{text-align: left;}
+
 #fonctionnement button
 {
 	font-size: 1em;
 	font-weight: bold;
 	border: none;
 	padding: 26px 0px;
-	width: 94%;
+	width: 90%;
 	margin-bottom: 20px;
 	border-radius: 20px;
 	box-shadow: 4px 4px 4px lightgrey;
-	margin-left: -4%;
+	margin-left: 7%;
 	background-color: #f7f7f7;
 }
 
 ol
 {
+	padding: 0;
 	list-style-type: none;
 	display: block;
 }
@@ -146,7 +177,7 @@ ol
 {
 	position: absolute;
 	margin-top: 7%;
-	margin-left: -7%;
+	margin-left: 4%;
 	padding: 4px 9px;
 	border-radius: 50%;
 	background-color: #9356DC;
@@ -156,22 +187,118 @@ ol
 
 .icone1
 {
-	margin-right: 20px;
+	margin-right: 6%;
+	margin-left: 10%;
 	color: grey;
 	font-size: 1.4em;
-	margin-left: 10px;
 }
 
 .icone2
 {
-	margin-right: 15px;
+	margin-right: 5%;
+	margin-left: 10%;
 	color: grey;
 	font-size: 1.3em;
 }
 
 .icone3
 {
-	margin-right: 20px;
+	margin-left: 10%;
+	margin-right: 5%;
 	color: grey;
 	font-size: 1.2em;
 }
+
+#restaurants
+{
+	background-color: #f7f7f7;
+	padding-top: 10%;
+	padding-bottom: 10%;
+}
+
+#restaurants h2
+{
+	margin-left: 5%;
+}
+
+#restaurants h3
+{
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+#restaurants p
+{
+	margin-left: 15px;
+	margin-top: -13px;
+
+}
+
+.container_resto
+{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.resto1
+{
+	background-image: url(../img/la_palette_du_gout.jpg);
+}
+
+.resto2
+{
+	background-image: url(../img/la_note_enchantee.jpg);
+}
+
+.resto3
+{
+	background-image: url(../img/a_la_francaise.jpg);
+}
+
+.resto4
+{
+	background-image: url(../img/le_delice_des_sens.jpg);
+}
+
+.forme_carte
+{
+	border-radius: 20px;
+	background-color: white;
+	width: 90%;
+	height: 254px;
+	margin-top: 15px;
+}
+
+.forme_photo
+{
+	width: 100%;
+	height: 177px;
+	background-size: cover;
+	border-radius: 20px 20px 0 0;
+}
+
+.new
+{
+	position: absolute;
+	background-color: #99E2D0;
+	padding: 7px 15px;
+	margin-left: 60%;
+	margin-top: 4%;
+	color: #10715a;
+	font-weight: bold;
+}
+
+.fa-heart
+{
+	position: absolute;
+	margin-left: 77%;
+	margin-top: 6%;
+	font-size: 1.5em;
+}
+
+
+
