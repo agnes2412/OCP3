@@ -9,72 +9,73 @@
 </head>	
 	
 <body>
-	<div id="bloc_page">
+	<div class="bloc_page">
 		<header>
-			<div id="logo">ohmyfood</div>
+			<div class="logo">ohmyfood</div>
 		</header>
 		
 	<section class="presentation">
-		<div id="recherche">
-			<div id="map_champ"><a href="map"><i class="fas fa-map-marker-alt fa-lg"></i></a>
-			<input type="search" id ="champ_recherche"/>
+		<div class="presentation__recherche">
+			<div class="recherche__map_champ"><a href="map"><i class="fas fa-map-marker-alt fa-lg"></i></a>
+			<input type="search" class ="recherche__champ_recherche"/>
 			</div>	
 		</div>
 			
-			<div id="reserver">
+			<div class="presentation__reserver">
 				<h1>Réservez le menu qui vous convient</h1>
 				<p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-				<button id="explorer">Explorer nos restaurants</button>	
+				<div class="reserver__explorer"><a href="#explorer_nos_restaurants" class="explorer__btn">Explorer nos restaurants</a>
+				</div>	
 			</div>	
 	</section>		
 
-		<section id="fonctionnement">
+		<section class="fonctionnement">
 			<h2>Fonctionnement</h2>
 			<nav>
 				<ol>
-					<li><span class="num">1</span><button class="form"><i class="fas fa-mobile-alt icone1"></i>Choisissez un restaurant</button></li>
-					<li><span class="num">2</span><button class="form"><i class="fas fa-list-ul icone2"></i>Composez votre menu</button></li>
-					<li><span class="num">3</span><button class="form"><i class="fas fa-store icone3"></i>Dégustez au restaurant</button></li>
+					<li><span class="num">1</span><a href="#choisir" class="form"><i class="fas fa-mobile-alt icone1"></i>Choisissez un restaurant</a></li>
+					<li><span class="num">2</span><a href="#composer" class="form"><i class="fas fa-list-ul icone2"></i>Composez votre menu</a></li>
+					<li><span class="num">3</span><a href="#deguster" class="form"><i class="fas fa-store icone3"></i>Dégustez au restaurant</a></li>
 				</ol>
 			</nav>
 		</section>
 
-		<section id="restaurants">
+		<section class="restaurants">
 			<h2>Restaurants</h2>
 			<div class="container_resto">
-				<div class=" forme_carte">
+				<div class=" container_resto__carte">
 					<a href="la_palette_du_gout.html">
-						<div class="resto1 forme_photo">
+						<div class="container_resto__resto1 container_resto__photo">
 							<span class="new">Nouveau</span>
 						</div>
-						<span><i class="far fa-heart hover_heart"></i></span>
+						<span><i class="far fa-heart heart hover_heart"></i></span>
 						<h3>La palette du goût</h3>
 						<p>Ménilmontant</p>	
 					</a>		
 				</div>
-				<div class="forme_carte">
+				<div class="container_resto__carte">
 					<a href="la_note_enchantee.html">
-						<div class="resto2 forme_photo">
+						<div class="container_resto__resto2 container_resto__photo">
 							<span class="new">Nouveau</span>
 						</div>
-						<span><i class="far fa-heart hover_heart"></i></span>
+						<span><i class="far fa-heart heart hover_heart"></i></span>
 						<h3>La note enchantée</h3>					
 						<p>Charonne</p>
 					</a>
 				</div>
-				<div class="forme_carte">
+				<div class="container_resto__carte">
 					<a href="a_la_francaise.html">
-						<div class="resto3 forme_photo">
+						<div class="container_resto__resto3 container_resto__photo">
 						</div>
-						<span><i class="far fa-heart hover_heart"></i></span>
+						<span><i class="far fa-heart heart hover_heart"></i></span>
 						<h3>A la française</h3>
 						<p>Cité Rouge</p>
 					</a>
 				</div>
-				<div class="forme_carte">
+				<div class="container_resto__carte">
 					<a href="le_delice_des_sens.html">
-						<div class="resto4 forme_photo"></div>
-						<span><i class="far fa-heart hover_heart"></i></span>
+						<div class="container_resto__resto4 container_resto__photo"></div>
+						<span><i class="far fa-heart heart hover_heart"></i></span>
 						<h3>Le délice des sens</h3>
 						<p>Folie-Méricourt</p>
 					</a>
@@ -83,16 +84,16 @@
 		</section>
 
 		<footer>
-			<h3>Ohmyfood</h3>
-			<div id="proposer">
+			<h3>ohmyfood</h3>
+			<div class="proposer form">
 				<a href="#proposer_un_restaurant"><span><i class="fas fa-utensils"></i></span>Proposer un restaurant</a>
 			</div>
-			<div id="devenir">
+			<div class="devenir form">
 				<a href="#devenir_partenaire"><span><i class="fas fa-hands-helping"></i></span>Devenir partenaire</a>
 			</div>
-			<div id="mentions"><a href="#mentions_legales">Mentions légales</a>
+			<div class="mentions form"><a href="#mentions_legales">Mentions légales</a>
 			</div>
-			<div id="contacts"><a href="#contacts">Contacts</a>
+			<div class="contacts form"><a href="#contacts">Contacts</a>
 			</div>
 		</footer>
 

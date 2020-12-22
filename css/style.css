@@ -24,11 +24,11 @@ body
   box-sizing: border-box;
 }
 
-#bloc_page
+.bloc_page
 {
 	border: 2px solid pink;
 }
-#logo
+.logo
 {
 	font-family: 'Shrikhand', cursive;
 	font-size: 2em;
@@ -51,18 +51,25 @@ a /*Liens non survolés*/
 header
 {
 	margin: 5px 0 0px 0;
+	position: relative;
 }
 
-#recherche
+.presentation
+{
+	margin-top: 0px;
+	padding-bottom: 15%;
+	background-color: #f2f2f2;
+}
+
+.presentation__recherche
 {
 	box-shadow: inset 0px 4px 3px rgba(160, 160, 160, .6);
 	padding: 17px 0px;
 	margin-bottom: 0px;
 	background-color: #e2e2e0;
-
 }
 
-#champ_recherche
+.recherche__champ_recherche
 {
 	background-color: #e2e2e0;
 	padding-left: 15px;
@@ -72,12 +79,12 @@ header
 	font-weight: bold;
 }
 
-#champ_recherche a:active
+.recherche__champ_recherche a:active
 {
 	border: none;
 }
 
-#map_champ
+.recherche__map_champ
 {
 	margin-left: 25%;
 }
@@ -85,13 +92,6 @@ header
 .fa-map-marker-alt
 {
 	color: black;
-}
-
-.presentation
-{
-	margin-top: 0px;
-	padding-bottom: 33%;
-	background-color: #f2f2f2;
 }
 
 footer h3
@@ -107,40 +107,40 @@ h1
 	margin-bottom: -8px;
 }
 
-#reserver p
+.presentation__reserver p
 {
+	margin-top: 20px;
+	margin-bottom: 13px;
 	text-align: center;
 	font-size: 1.1em;
 }
 
-#reserver
+.reserver__explorer
 {
-	position: relative;
+	display: flex;
+	justify-content: center;
 }
 
-#explorer
+.explorer__btn
 {
-	position: absolute;
-	margin:0;
-	top: 145%;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
+	text-align: center;
+	width: 67%;
+	margin-top: 20px;
 	font-size: 1.1em;
 	color: white;
 	background: linear-gradient(#FF79DA, #9356DC);
-	padding: 17px 25px;
+	padding: 16px 20px;
 	border-radius: 30px;
 	box-shadow: 4px 4px 4px lightgrey;
 	border: none;
 }
 
-#fonctionnement
+.fonctionnement
 {
 	border: 2px solid blue;
-	position: relative;
 }
 
-#fonctionnement h2
+.fonctionnement h2
 {
 	font-size: 1.4em;
 	margin-left: 20px;
@@ -148,16 +148,13 @@ h1
 
 }
 
-button
-{text-align: left;}
-
-#fonctionnement button
+.fonctionnement li
 {
 	font-size: 1em;
 	font-weight: bold;
 	border: none;
 	padding: 26px 0px;
-	width: 90%;
+	width: 87%;
 	margin-bottom: 20px;
 	border-radius: 20px;
 	box-shadow: 4px 4px 4px lightgrey;
@@ -175,9 +172,7 @@ ol
 
 .num
 {
-	position: absolute;
-	margin-top: 7%;
-	margin-left: 4%;
+	margin-left: -3%;
 	padding: 4px 9px;
 	border-radius: 50%;
 	background-color: #9356DC;
@@ -209,25 +204,25 @@ ol
 	font-size: 1.2em;
 }
 
-#restaurants
+.restaurants
 {
 	background-color: #f7f7f7;
 	padding-top: 10%;
 	padding-bottom: 10%;
 }
 
-#restaurants h2
+.restaurants h2
 {
 	margin-left: 5%;
 }
 
-#restaurants h3
+.restaurants h3
 {
 	margin-top: 10px;
 	margin-left: 15px;
 }
 
-#restaurants p
+.restaurants p
 {
 	margin-left: 15px;
 	margin-top: -13px;
@@ -244,27 +239,31 @@ ol
 	position: relative;
 }
 
-.resto1
+.container_resto__resto1
 {
 	background-image: url(../img/la_palette_du_gout.jpg);
+	background-position: bottom;
 }
 
-.resto2
+.container_resto__resto2
 {
 	background-image: url(../img/la_note_enchantee.jpg);
+	background-position-y: 60%;
 }
 
-.resto3
+.container_resto__resto3
 {
 	background-image: url(../img/a_la_francaise.jpg);
+	background-position: bottom;
 }
 
-.resto4
+.container_resto__resto4
 {
 	background-image: url(../img/le_delice_des_sens.jpg);
+	background-position: bottom;
 }
 
-.forme_carte
+.container_resto__carte
 {
 	border-radius: 20px;
 	background-color: white;
@@ -273,7 +272,7 @@ ol
 	margin-top: 15px;
 }
 
-.forme_photo
+.container_resto__photo
 {
 	width: 100%;
 	height: 177px;
@@ -285,14 +284,14 @@ ol
 {
 	position: absolute;
 	background-color: #99E2D0;
-	padding: 7px 15px;
+	padding: 5px 13px;
 	margin-left: 60%;
 	margin-top: 4%;
 	color: #10715a;
 	font-weight: bold;
 }
 
-.fa-heart
+.heart
 {
 	position: absolute;
 	margin-left: 77%;
@@ -300,5 +299,153 @@ ol
 	font-size: 1.5em;
 }
 
+.heart_resto
+{
+	position: absolute;
+	margin-left: 77%;
+	margin-top: -13%;
+	font-size: 1.5em;
+}
+
+
+footer
+{
+	padding: 5px 0 35px 20px;
+	color: white;
+	background-color: #333333;
+}
+
+footer h3
+{
+	font-size: 1.1em;
+}
+
+.proposer span
+{
+	color: white;
+	margin-right: 17px;
+}
+
+.devenir span
+{
+	color: white;
+	margin-right: 10px;
+}
+
+footer a
+{
+	color: white;
+}
+
+.form
+{
+	margin-bottom: 8px;
+}
+
+/*Style.css de l'index "la palette du gout"*/
+.arrow_left
+{
+	position: absolute;
+	margin-top: 4%;
+	margin-left: 6%; 
+}
+
+.photo
+{
+	width: 100%;
+	background-size: cover;
+	background-position: bottom;
+}
+
+.photo2
+{
+	width: 100%;
+	background-size: cover;
+	background-position: bottom;
+}
+
+
+.menu
+{
+	background-color: #f2f2f2;
+	padding-top: 20px;
+	border-radius: 20px 20px 0 0;
+	margin-top: -10%;
+}
+
+.menu__resto
+{
+	font-family: 'Shrikhand';
+	margin-left: 4%;
+}
+
+.entrees
+{
+	position: relative;
+}
+
+.plats
+{
+	position: relative;
+	margin-top: 30px;
+}
+
+.desserts
+{
+	position: relative;
+	margin-top: 30px;
+}
+
+.menu__titre
+{
+	margin-left: 4%;
+	margin-bottom: 20px;
+}
+
+p
+{
+	margin: 0;
+	margin-top: 5px;
+}
+
+.menu__btn
+{
+	background-color: white;
+	padding: 10px;
+	border-radius: 20px;
+	box-shadow: 4px 4px 4px lightgrey;
+	margin-bottom: 15px;
+	margin-left: 4%;
+	width: 90%;
+}
+
+.menu__prix
+{
+	position: absolute;
+	margin-left: 75%;
+	margin-top: -6%;
+	font-weight: bold;
+}
+
+.commander
+{
+	display: flex;
+	justify-content: center;
+}
+
+.commander__btn
+{
+	text-align: center;
+	width: 67%;
+	margin-top: 10%;
+	margin-bottom: 25%;
+	font-size: 1.1em;
+	color: white;
+	background: linear-gradient(#FF79DA, #9356DC);
+	padding: 16px 20px;
+	border-radius: 30px;
+	box-shadow: 4px 4px 4px lightgrey;
+	border: none;
+}
 
 
