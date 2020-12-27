@@ -1,87 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
 	<meta charset="utf-8"/>
 	<link href="css/style.css" rel="stylesheet" type="text/css"/>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Pour créer un site web réactif sur tous les appareils-->
 	<link href="css/all.min.css" rel="stylesheet"> <!--load all styles --><!--Pour intégrer des icônes Font-awesone-->
 	<title>A la française</title>
-
 </head>
+
 <body>
 	<div class="bloc_page">
-	<header>
-		<a href="index.html"><span class="arrow_left"><i class="fas fa-arrow-left"></i></span>
-		<div class="logo">ohmyfood</div>
-	</header>
+		<header>
+			<a href="index.html"><span class="arrow_left"><i class="fas fa-arrow-left"></i></span></a>
+			<div class="logo">ohmyfood</div>
+		</header>
 
 	<div><img src="img/a_la_francaise.jpg" class="photo" alt="photo_restaurant_a_la_francaise">
 	</div>
 
-	<div class="menu">
+	<section class="menu">
 		<div class="menu__resto">
 			<h2>A la française</h2>
 			<span><i class="far fa-heart heart_resto hover_heart"></i></span>
 		</div>
 		<div class="entrees">
 			<div class="menu__titre">ENTREES</div>
-			<div class="menu__btn">
-				<p>Tartare de poulpe acidulé</p>
-				<p>Aux zestes d'orange</p>
-				<span class="menu__prix">25 &euro;</span>
-			</div>
-			<div class="menu__btn">
-				<p>Velouté de légumes d'antan</p>
-				<p>Carottes, panais, topinambour</p>
-				<span class="menu__prix">35 &euro;</span>
-			</div>
-			<div class="menu__btn">
-				<p>Soupe à l'oignon</p>
-				<p>Revisitée</p>
-				<span class="menu__prix">20 &euro;</span>
-			</div>
+				<div class="container__btn">
+					<div class="menu__btn">
+						<h3>Tartare de poulpe acidulé</h3>
+						<p>Aux zestes d'orange</p>
+						<span class="menu__prix slidein_prix">25 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
+					<div class="menu__btn">
+						<h3>Velouté de légumes d'antan</h3>
+						<p>Carottes, panais, topinambour</p>
+						<span class="menu__prix slidein_prix">35 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
+					<div class="menu__btn">
+						<h3>Soupe à l'oignon</h3>
+						<p>Revisitée</p>
+						<span class="menu__prix slidein_prix">20 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
+				</div>
 		</div>
 
 		<div class="plats">
 			<div class="menu__titre">PLATS</div>
-				<div class="menu__btn">
-					<p>Coquilles Saint-Jacques</p>
-					<p>Accompagné de sa purée de panais</p>
-					<span class="menu__prix">40 &euro;</span>
-				</div>
-				<div class="menu__btn">
-					<p>Magret de canard</p>
-					<p>Et parmentier de pommes de terre</p>
-					<span class="menu__prix">35 &euro;</span>
-				</div>
-				<div class="menu__btn">
-					<p>Pigeonneau d'Ille-et-Vilaine</p>
-					<p>Sur son lit de gnocchis de légumes</p>
-					<span class="menu__prix">44 &euro;</span>
+				<div class="container__btn">
+					<div class="menu__btn">
+						<h3>Coquilles Saint-Jacques</h3>
+						<p>Accompagné de sa purée de panais</p>
+						<span class="menu__prix slidein_prix">40 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
+					<div class="menu__btn">
+						<h3>Magret de canard</h3>
+						<p>Et parmentier de pommes de terre</p>
+						<span class="menu__prix slidein_prix">35 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
+					<div class="menu__btn">
+						<h3>Pigeonneau d'Ille-et-Vilaine</h3>
+						<p>Sur son lit de gnocchis de légumes</p>
+						<span class="menu__prix slidein_prix">44 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
 				</div>
 		</div>	
 
 		<div class="desserts">
 			<div class="menu__titre">DESSERTS</div>
-				<div class="menu__btn">
-					<p>Pétales de violettes glacés</p>
-					<p>Et purée de noisettes</p>
-					<span class="menu__prix">18 &euro;</span>
+				<div class="container__btn">
+					<div class="menu__btn">
+						<h3>Pétales de violettes glacés</h3>
+						<p>Et purée de noisettes</p>
+						<span class="menu__prix slidein_prix">18 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
+					<div class="menu__btn">
+						<h3>Fondant au chocolat</h3>
+						<p>Revisité</p>
+						<span class="menu__prix slidein_prix">22 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
+					<div class="menu__btn">
+						<h3>Millefeuille croustillant</h3>
+						<p>Myrtille et pâte d'amande</p>
+						<span class="menu__prix slidein_prix">23 &euro;</span>
+						<div class="btn__overlay"><i class="far fa-check-circle"></i>
+						</div>
+					</div>
 				</div>
-				<div class="menu__btn">
-					<p>Fondant au chocolat</p>
-					<p>Revisité</p>
-					<span class="menu__prix">22 &euro;</span>
-				</div>
-				<div class="menu__btn">
-					<p>Millefeuille croustillant</p>
-					<p>Myrtille et pâte d'amande</p>
-					<span class="menu__prix">23 &euro;</span>
-				</div>
-		</div>		
+		</div>	
+	</section>		
 
 		<div class="commander"><a href="#commander" class="commander__btn">Commander</a></div>
-		</div>
 
 		<footer>
 			<h3>ohmyfood</h3>
@@ -96,8 +120,6 @@
 			<div class="contacts form"><a href="#contacts">Contacts</a>
 			</div>
 		</footer>
-
-
 	</div>
 
 </body>
