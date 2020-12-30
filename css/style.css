@@ -34,9 +34,8 @@ body
 	font-size: 2em;
 	display: flex;
 	justify-content: center;
-	margin-bottom: 10px;
+	margin-bottom: -13px;
 }
-
 
 *:focus {
 outline: none;
@@ -50,23 +49,53 @@ a /*Liens non survolés*/
 
 header
 {
-	margin: 5px 0 0px 0;
+	padding: 0;
 	position: relative;
+	padding-bottom: 10px;
 }
 
 .presentation
 {
+	display: flex;
+	flex-direction: row-reverse;
 	margin-top: 0px;
 	padding-bottom: 15%;
 	background-color: #f2f2f2;
 }
 
+@media (max-width: 500px){
+.presentation
+{
+	display: block;
+	margin-top: 0px;
+	padding-bottom: 15%;
+	background-color: #f2f2f2;
+}
+}
+
 .presentation .presentation__recherche
 {
-	box-shadow: inset 0px 4px 3px rgba(160, 160, 160, .6);
+	width: 100%;
+	height: 10%;
+	margin-top: 20px;
+	box-shadow: inset 0px 6px 3px rgba(160, 160, 160, .6);
 	padding: 17px 0px;
 	margin-bottom: 0px;
 	background-color: #e2e2e0;
+}
+}
+
+@media (max-width: 500px){
+.presentation .presentation__recherche
+{
+	width: 100%;
+	margin-top: 10px;
+	box-shadow: inset 0px 6px 3px rgba(160, 160, 160, .6);
+	padding: 17px 0px;
+	margin-bottom: 0px;
+	background-color: #e2e2e0;
+	border: 1px solid black;
+}
 }
 
 .recherche__champ_recherche
@@ -77,6 +106,19 @@ header
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 	font-weight: bold;
+}
+}
+
+@media (max-width: 500px){
+.recherche__champ_recherche
+{
+	background-color: #e2e2e0;
+	padding-left: 15px;
+	border: none;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: bold;
+}
 }
 
 .recherche__champ_recherche a:active
@@ -124,7 +166,7 @@ h1
 	font-size: 1.1em;
 	color: white;
 	background: linear-gradient(#FF79DA, #9356DC);
-	padding: 16px 20px;
+	padding: 16px 5px;
 	border-radius: 30px;
 	box-shadow: 4px 4px 4px lightgrey;
 	border: none;
@@ -139,10 +181,33 @@ h1
 {
 	font-size: 1.4em;
 	margin-left: 20px;
-	margin-top: 13%;
-
+	margin-top: 2%;
 }
 
+@media (max-width: 500px){
+.fonctionnement h2
+{
+	font-size: 1.4em;
+	margin-left: 20px;
+	margin-top: 13%;
+}
+}
+
+.fonctionnement li
+{
+	font-size: 1em;
+	font-weight: bold;
+	border: none;
+	padding: 26px 0px;
+	width: 30%;
+	margin-bottom: 20px;
+	border-radius: 20px;
+	box-shadow: 4px 4px 4px lightgrey;
+	margin-left: 2%;
+	background-color: #f7f7f7;
+}
+
+@media (max-width: 500px){
 .fonctionnement li
 {
 	font-size: 1em;
@@ -156,12 +221,23 @@ h1
 	margin-left: 7%;
 	background-color: #f7f7f7;
 }
+}
 
 ol
 {
 	padding: 0;
 	list-style-type: none;
+	display: flex;
+	justify-content: space-around;
+}
+
+@media (max-width: 500px){
+ol
+{
+	padding: 0;
+	list-style-type: none;
 	display: block;
+}
 }
 
 
@@ -221,9 +297,20 @@ ol
 {
 	margin-left: 15px;
 	margin-top: -13px;
-
 }
 
+
+.container_resto
+{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+@media (max-width: 500px){
 .container_resto
 {
 	width: 100%;
@@ -232,6 +319,7 @@ ol
 	justify-content: center;
 	flex-wrap: wrap;
 	position: relative;
+}
 }
 
 .container_resto__resto1
@@ -258,6 +346,18 @@ ol
 	background-position: bottom;
 }
 
+
+.container_resto__carte
+{
+	border-radius: 20px;
+	background-color: white;
+	width: 45%;
+	height: auto;
+	margin-top: 15px;
+}
+
+
+@media (max-width: 500px){
 .container_resto__carte
 {
 	border-radius: 20px;
@@ -265,6 +365,7 @@ ol
 	width: 90%;
 	height: 254px;
 	margin-top: 15px;
+}
 }
 
 .container_resto__photo
@@ -280,12 +381,34 @@ ol
 	position: absolute;
 	background-color: #99E2D0;
 	padding: 5px 13px;
+	margin-left: 35%;
+	margin-top: 2%;
+	color: #10715a;
+	font-weight: bold;
+}
+
+@media (max-width: 500px){
+.new
+{
+	position: absolute;
+	background-color: #99E2D0;
+	padding: 5px 13px;
 	margin-left: 60%;
 	margin-top: 4%;
 	color: #10715a;
 	font-weight: bold;
 }
+}
 
+.heart
+{
+	position: absolute;
+	margin-left: 38%;
+	margin-top: 2%;
+	font-size: 1.5em;
+}
+
+@media (max-width: 500px){
 .heart
 {
 	position: absolute;
@@ -293,12 +416,13 @@ ol
 	margin-top: 6%;
 	font-size: 1.5em;
 }
+}
 
 .heart_resto
 {
 	position: absolute;
-	margin-left: 77%;
-	margin-top: -13%;
+	margin-left: 83%;
+	margin-top: -16%;
 	font-size: 1.5em;
 }
 
@@ -338,7 +462,7 @@ footer a
 	margin-bottom: 8px;
 }
 
-/*Style.css des pages "la palette du gout" "la note enchantée le délice des sens et "à la française*/
+/*Style.css des pages "la palette du gout" "la note enchantée "le délice des sens" et "à la française*/
 .arrow_left
 {
 	position: absolute;
@@ -351,15 +475,14 @@ footer a
 	width: 100%;
 	background-size: cover;
 	background-position: bottom;
-	border: 2px solid blue;
 }
 
 .photo2 /* photo du restaurant "la note enchantée" qui a un format différent*/
 {
 	width: 100%;
-	height: 200px;
+	height: 280px;
+	object-fit: cover;
 	border: 2px solid blue;
-	margin-top: 0;
 }
 
 
@@ -369,7 +492,6 @@ footer a
 	background-color: #f2f2f2;
 	margin-top: -15%;
 	padding-bottom: 10px;
-	
 }
 
 .menu__titre
@@ -377,39 +499,40 @@ footer a
 	width: 12%;
 	padding-bottom: 5px;
 	border-bottom: 3px solid #99E2D0;
-	margin-bottom: 20px;
-	margin-top: 35px;
+	margin-bottom: 15px;
+	margin-top: 30px;
 	margin-left: 4%;
 }
 
+
 .menu__resto
 {
-	font-family: 'Shrikhand';
-	padding-left: 4%;
 	position: relative;
 	background-color: #f2f2f2;
 	padding-top: 10px;
-	border-radius: 40px 40px 0 0;
+	border-radius: 30px 30px 0 0;
 }
-
+.menu__resto h2
+{
+	padding-top: 0;
+	padding-left: 4%;
+	font-family: 'Shrikhand';
+	font-size: 1.7em;
+}
 
 .plats
 {
-	margin-top: 30px;
+	margin-top: 50px;
 }
 
 .desserts
 {
-	margin-top: 30px;
+	margin-top: 50px;
 }
-
-.contenair__btn
-
 
 .menu__titre h2
 {
 	font-size: 1.7em;
-
 }
 
 p
@@ -418,7 +541,6 @@ p
 	margin-top: 5px;
 }
 
-
 .menu__btn
 {
 	position: relative;
@@ -426,32 +548,27 @@ p
 	padding: 10px;
 	border-radius: 15px;
 	box-shadow: 4px 4px 4px lightgrey;
-	margin-bottom: 15px;
-	margin-left: 2%;
-	width: 96%;
+	margin-bottom: 16px;
+	margin-left: 3%;
+	width: 93%;
 	animation-duration: 2s;
-	animation-name: slidein;
+	animation-name: apparition_btn;
+	transition: ease-in-out;
 }
 
-@keyframes slidein {
-	from {
-		margin-bottom: 10%;
-		width: 96%;
-	}
+@keyframes apparition_btn {
+	from {margin-bottom: 10%;
+		width: 93%;
+		opacity: 0;}
+		
+		25%{opacity: 0;}
 
-	0% {opacity: 0;}
-
-	25% {opacity: 0;}
-
-	50% {opacity: 0.5;}
-
-	75% {opacity: 0.8 ;}
-
-	to {
-		margin-bottom: 15px;
-		width: 96%;
-	}
+	
+	to {opacity: 1;
+		margin-bottom: 16px;
+		width: 93%;}
 }
+
 
 .btn__overlay
 {
@@ -473,8 +590,7 @@ p
 .menu__btn:hover .btn__overlay
 {
 	height: 100%;
-	left: 82%;
-	
+	left: 82%;	
 }
 
 .fa-check-circle
@@ -487,13 +603,13 @@ p
   	overflow: hidden;
   	top: 33%;
   	left: 31%;
-  	transform: rotate(-360deg);
+  	transform: rotate(0deg);
   	transition: transform 500ms ease;
 }
 
 .menu__btn:hover .fa-check-circle
 {
-	transform: rotate(0deg);
+	transform: rotate(360deg);
 }
 
 .menu__btn h3
@@ -501,7 +617,7 @@ p
 	font-size: 1.1em;
 	font-weight: bold;
 	margin: 0;
-	width: 85%;
+	width: 88%;
 	/*Nécessaires pour text-overflow*/
 	white-space: nowrap;
 	overflow: hidden;
@@ -536,21 +652,11 @@ p
 	margin-left: 83%;
 	margin-top: -6%;
 	font-weight: bold;
-}
-
-.slidein_prix
-{
-	margin-left: 83%;
-	margin-top: -6%;
-	font-weight: bold;
-	overflow: hidden;
-  	height: 100%;
   	transition: .5s ease;
 }
 
-.menu__btn:hover .slidein_prix
+.menu__btn:hover .menu__prix
 {
-	height: 100%;
 	margin-left: 64%;
 }
 
@@ -564,10 +670,10 @@ p
 .commander__btn
 {
 	text-align: center;
-	width: 67%;
+	width: 65%;
 	margin-top: 5%;
 	margin-bottom: 25%;
-	font-size: 1.1em;
+	font-size: 1em;
 	color: white;
 	background: linear-gradient(#FF79DA, #9356DC);
 	padding: 16px 20px;
