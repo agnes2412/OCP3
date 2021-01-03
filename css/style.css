@@ -16,16 +16,93 @@
 
 body
 {
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto', sans-serif;	
 }
 
 * {
   box-sizing: border-box;
 }
 
-.bloc_page
+.space_spinner
 {
-	border: 2px solid pink;
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	background-color: #f2f2f2;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	padding-top: 35%;
+	z-index: 1;
+	animation-name: space_spinner;
+	animation-duration: 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes space_spinner
+{
+	0% {opacity: 1;}
+	50% {opacity: 1;}
+	100% {opacity: 0; display: none;}
+}
+
+.logo_spinner
+{
+	font-family: 'Shrikhand', cursive;
+	font-size: 2em;
+  	position: absolute;
+  	left: 18%;
+  	top: 45%;
+	color: black;
+	animation-name: logo_spinner;
+  	animation-duration: 3s; 
+  	animation-timing-function: ease;
+}
+
+@keyframes logo_spinner
+{
+	0% {
+		transform: skew(-10deg,-10deg); opacity: 1;}
+		50% {opacity: 1;}
+	100% {transform: skew(-180deg,-180deg); opacity: 0}
+}
+
+.spinner
+{
+  	width: 350px;
+  	height: 350px;
+  	border: 40px solid #f2f2f2;
+  	border-radius: 50%;
+  	border-top: 40px solid #9356DC;
+  	border-bottom: 40px solid #FF79DA;
+  	animation-name: spinner;
+  	animation-duration: 3s; 
+  	animation-timing-function: ease;
+}
+
+@keyframes spinner
+{
+	0% {
+		transform: rotate(0deg)
+	}
+
+	100% {transform: rotate(360deg);}
+}
+
+.apparition_index
+{
+	position: relative;
+  	animation-name: apparition_index;
+  	animation-duration: 4s;
+}
+
+@keyframes apparition_index
+{
+	0%{opacity: 0;}
+		45%{opacity: 0;}
+		46%{bottom: -300px;}
+		100%{opacity: 1;
+			bottom: 0;}
 }
 
 .logo
@@ -83,7 +160,6 @@ header
 	margin-bottom: 0px;
 	background-color: #e2e2e0;
 }
-}
 
 @media (max-width: 500px){
 .presentation .presentation__recherche
@@ -94,7 +170,6 @@ header
 	padding: 17px 0px;
 	margin-bottom: 0px;
 	background-color: #e2e2e0;
-	border: 1px solid black;
 }
 }
 
@@ -106,7 +181,6 @@ header
 	font-family: 'Roboto', sans-serif;
 	font-size: 1em;
 	font-weight: bold;
-}
 }
 
 @media (max-width: 500px){
@@ -205,7 +279,11 @@ h1
 	box-shadow: 4px 4px 4px lightgrey;
 	margin-left: 2%;
 	background-color: #f7f7f7;
+	transition: 1s ease;
 }
+
+.fonctionnement li:hover 
+{background-color: #ece2f9;}
 
 @media (max-width: 500px){
 .fonctionnement li
@@ -259,6 +337,9 @@ ol
 	font-size: 1.4em;
 }
 
+.fonctionnement li:hover .icone1
+{color: #9356DC;}
+
 .icone2
 {
 	margin-right: 5%;
@@ -266,6 +347,8 @@ ol
 	color: grey;
 	font-size: 1.3em;
 }
+.fonctionnement li:hover .icone2
+{color: #9356DC;}
 
 .icone3
 {
@@ -274,6 +357,8 @@ ol
 	color: grey;
 	font-size: 1.2em;
 }
+.fonctionnement li:hover .icone3
+{color: #9356DC;}
 
 .restaurants
 {
@@ -402,10 +487,26 @@ ol
 
 .heart
 {
+	color: white;
 	position: absolute;
 	margin-left: 38%;
 	margin-top: 2%;
 	font-size: 1.5em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	cursor: pointer;
+}
+
+.heart:hover  {
+	
+	animation-name: heart_hover;
+	animation-duration: 1.5s;
+}
+
+@keyframes heart_hover {
+0% {color: #FF79DA; text-shadow: none;}
+30% {color: #9356DC; transform: scale(2,2); text-shadow: none;}
+60% {color: #FF79DA; font-size: 1.5em; text-shadow: none;}
+100% {color: #9356DC; text-shadow: none;}
 }
 
 @media (max-width: 500px){
@@ -413,8 +514,9 @@ ol
 {
 	position: absolute;
 	margin-left: 77%;
-	margin-top: 6%;
+	margin-top: -8%;
 	font-size: 1.5em;
+	cursor: pointer;
 }
 }
 
@@ -422,8 +524,25 @@ ol
 {
 	position: absolute;
 	margin-left: 83%;
-	margin-top: -16%;
+	margin-top: -15%;
 	font-size: 1.5em;
+	color: #f2f2f2;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.heart_resto:hover  {
+	
+	animation-name: heart_resto_hover;
+	animation-duration: 2s;
+	}
+
+	@keyframes heart_resto_hover {
+0% {color: #FF79DA; text-shadow: none;}
+15% {color: #9356DC; transform: scale(1.5,1.5); text-shadow: none;}
+35% {color: #9356DC; transform: scale(1,1); text-shadow: none;}
+55% {color: #FF79DA; transform: scale(2.5,2.5); text-shadow: none;}
+65% {color: #FF79DA; text-shadow: none;}
+100% {color: #9356DC; text-shadow: none;}
 }
 
 
@@ -553,22 +672,17 @@ p
 	width: 93%;
 	animation-duration: 2s;
 	animation-name: apparition_btn;
-	transition: ease-in-out;
 }
 
 @keyframes apparition_btn {
-	from {margin-bottom: 10%;
-		width: 93%;
+	0% {transform: translateY(20px);
 		opacity: 0;}
 		
 		25%{opacity: 0;}
-
 	
-	to {opacity: 1;
-		margin-bottom: 16px;
-		width: 93%;}
+	100% {opacity: 1;
+		transform: translateY(0px);}
 }
-
 
 .btn__overlay
 {
@@ -596,15 +710,15 @@ p
 .fa-check-circle
 {
 	font-size: 1.5em;
-	background-color: white;
-	color: #99E2D0;
+	background-color: #99E2D0;
+	color: white;
 	border-radius: 50%;
 	position: absolute;
   	overflow: hidden;
   	top: 33%;
   	left: 31%;
   	transform: rotate(0deg);
-  	transition: transform 500ms ease;
+  	transition: 500ms ease;
 }
 
 .menu__btn:hover .fa-check-circle
@@ -650,7 +764,7 @@ p
 {
 	position: absolute;
 	margin-left: 83%;
-	margin-top: -6%;
+	margin-top: -5.5%;
 	font-weight: bold;
   	transition: .5s ease;
 }
