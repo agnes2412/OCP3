@@ -1213,6 +1213,13 @@ p {
 	}
 }
 
+@media (max-width: 350px) {
+	.menu__btn {
+	width: 95%;
+	margin-left: 2%;
+	}
+}
+
 .menu__btn:hover {
 	cursor: pointer;
 }
@@ -1279,7 +1286,7 @@ p {
 	}
 }
 
-@media (max-width: 360px){
+@media (max-width: 340px){
 	.menu__btn h3 {
 		white-space: normal;/*permet de disposer le texte des boutons sur deux lignes afin de pouvoir lire l'intégralité des plats sur les petits écrans*/
 	}
@@ -1290,7 +1297,7 @@ p {
 	text-overflow: ellipsis;/* ajoute des points de suspension*/
 }
 
-@media (max-width: 360px){
+@media (max-width: 340px){
 	.menu__btn:hover h3 {
 		white-space: nowrap;
 	}
@@ -1317,7 +1324,7 @@ p {
 	}
 }
 
-@media (max-width: 360px){
+@media (max-width: 340px){
 	.menu__btn p {
 		white-space: normal;
 	}
@@ -1328,7 +1335,7 @@ p {
 	text-overflow: ellipsis;
 }
 
-@media (max-width: 360px){
+@media (max-width: 340px){
 	.menu__btn:hover p {
 		white-space: nowrap;
 	}
