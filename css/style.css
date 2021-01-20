@@ -3,7 +3,7 @@
  	src: url("../Roboto/Roboto-Regular.ttf");
  	font-weight: normal;
  	font-style: normal;
- 	font-display: swap;
+ 	font-display: swap;/*Assure une police présente dans le navigateur le temps de chargement de la police*/
 }
 
 @font-face {
@@ -11,7 +11,7 @@
     src: url("../Shrikhand/Shrikhand-Regular.ttf");
     font-weight: normal;
     font-style: normal;
-    font-display: swap;
+    font-display: swap; /*Assure une police présente dans le navigateur le temps de chargement de la police*/
 }
 
 body {
@@ -29,11 +29,11 @@ body {
 	background-color: #f2f2f2;
 	width: 100%;
 	height: 100%;
-	position: fixed;
-	z-index: 10;
+	position: fixed; /*L'élément reste au même endroit même si la page défile*/
+	z-index: 10; /*Détermine l'ordre des différentes couches lorsque des éléments se chevauchent*/
 	animation-name: space_spinner;
 	animation-duration: 3s;
-	animation-fill-mode: forwards;
+	animation-fill-mode: forwards; /*Permet de garder l'animation de la façon dont elle s'est terminée*/
 }
 
 @keyframes space_spinner {
@@ -53,8 +53,7 @@ body {
   	position: absolute;
   	animation-name: spinner;
   	animation-duration: 3s; 
-  	animation-timing-function: ease;
-  	animation-timing-function: cubic-bezier(0, -1.5, 1, 1);
+  	animation-timing-function: cubic-bezier(0, -2, 1, 1); /*Permet de créer un mouvement dynamique à l'animation*/
 }
 
 @keyframes spinner {
@@ -72,20 +71,7 @@ body {
 @keyframes apparition_index {
 	0% {opacity: 0; }
 	45% {opacity: 0;}
-	46% {bottom: -500px;}
-	100% {opacity: 1; bottom: 0;}
-}
-
-@media (max-width: 500px){
-	.apparition_index {
-  		animation-name: apparition_index500;
-	}
-}
-
-@keyframes apparition_index500 {
-	0% {opacity: 0;}
-	45% {opacity: 0;}
-	46% {bottom: -300px;}
+	46% {bottom: -400px;}
 	100% {opacity: 1; bottom: 0;}
 }
 
@@ -1274,6 +1260,11 @@ p {
 	transition: .5s ease;
 }
 
+.menu__btn:hover h3 {
+	width: 63%;
+	text-overflow: ellipsis;/* ajoute des points de suspension*/
+}
+
 @media (max-width: 1150px){
 	.menu__btn h3 {
 		font-size: 1em;
@@ -1292,11 +1283,6 @@ p {
 	}
 }
 
-.menu__btn:hover h3 {
-	width: 63%;
-	text-overflow: ellipsis;/* ajoute des points de suspension*/
-}
-
 @media (max-width: 340px){
 	.menu__btn:hover h3 {
 		white-space: nowrap;
@@ -1310,6 +1296,11 @@ p {
 	white-space: nowrap;
 	overflow: hidden; /*permet de rogner les mots lors du coulissement de la coche*/
 	transition: .5s ease;
+}
+
+.menu__btn:hover p {
+	width: 67%;
+	text-overflow: ellipsis;
 }
 
 @media (max-width: 1150px){
@@ -1328,11 +1319,6 @@ p {
 	.menu__btn p {
 		white-space: normal;
 	}
-}
-
-.menu__btn:hover p {
-	width: 67%;
-	text-overflow: ellipsis;
 }
 
 @media (max-width: 340px){
